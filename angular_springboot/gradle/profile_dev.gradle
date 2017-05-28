@@ -1,0 +1,38 @@
+import org.gradle.internal.os.OperatingSystem
+
+apply plugin: 'org.springframework.boot'
+
+ext {
+    logbackLoglevel = "DEBUG"
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-devtools"
+}
+
+def profiles = 'dev'
+if (project.hasProperty('no-liquibase')) {
+    profiles += ',no-liquibase'
+}
+
+bootRun {
+    args = []
+}
+
+
+processResources {
+    filesMatching('**/logback-spring.xml') {
+        filter {
+            it.replace('#logback.loglevel#', logbackLoglevel)
+        }
+    }
+    filesMatching('**/bootstrap.yml') {
+        filter {
+            it.replace('#spring.profiles.active#', profiles)
+        }
+        filter {
+            it.replace('#project.version#', version)
+        }
+    }
+}
+

@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.acme.alomundo",
+      "nativeLanguage": "pt-br"
+    },
+    "jhipsterVersion": "4.5.1",
+    "baseName": "angularspringbootmicrosservico",
+    "packageName": "com.acme.alomundo",
+    "packageFolder": "com/acme/alomundo",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "no",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "prodDatabaseType": "no",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSocialSignIn": false,
+    "jwtSecretKey": "7f6620d2c74e0df00c296b18c9690418a3ffe7e8",
+    "enableTranslation": true,
+    "applicationType": "microservice",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "otherModules": [],
+    "skipClient": true,
+    "skipUserManagement": true,
+    "nativeLanguage": "pt-br",
+    "languages": [
+      "pt-br"
+    ],
+    "clientPackageManager": "yarn"
+  }
+}
